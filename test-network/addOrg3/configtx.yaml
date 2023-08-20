@@ -1,0 +1,27 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+---
+Organizations:
+    # ---------------------------------------------------------------------------
+    # Subhra
+    # ---------------------------------------------------------------------------
+    - &Subhra
+        Name: SubhraMSP
+        ID: SubhraMSP
+        MSPDir: ../organizations/peerOrganizations/subhra.example.com/msp
+        Policies:
+            Readers:
+                Type: Signature
+                Rule: "OR('SubhraMSP.admin', 'SubhraMSP.peer', 'SubhraMSP.client')"
+            Writers:
+                Type: Signature
+                Rule: "OR('SubhraMSP.admin', 'SubhraMSP.client')"
+            Admins:
+                Type: Signature
+                Rule: "OR('SubhraMSP.admin')"
+            Endorsement:
+                Type: Signature
+                Rule: "OR('SubhraMSP.peer')"
