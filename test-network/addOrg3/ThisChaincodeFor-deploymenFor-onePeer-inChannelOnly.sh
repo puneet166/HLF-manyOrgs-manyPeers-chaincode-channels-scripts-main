@@ -1,3 +1,10 @@
+# This chaincode deployment file like this senerio -
+# You have created a new org name - "student" with single peer that is "peero" and create a new channel in student that is "studentOnly"
+# org - student
+# channel - studentonly
+# peers - peer0 in student
+# want to deploy chaincode on peer0 in studentonly channel"
+
 #!/bin/bash
 
 if [ $# -ne 6 ]; then
